@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Data Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="progress-container">
+        <svg id="progress-svg" viewBox="0 0 100 100">
+            <path id="progress-path" d="M10,50 Q25,10 50,50 T90,50" stroke="#333" stroke-width="2" fill="none" stroke-dasharray="100" stroke-dashoffset="100"></path>
+        </svg>
+    </div>
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Wheelzzz Performs</h1>
+            <h2>BMW Performance Analytics</h2>
+            <div class="odometer" id="odometer">0000</div>
+            <p>Cars Analyzed</p>
+        </div>
+    </section>
+    <section id="intro">
+        <div class="glass-panel">
+            <h2>Explore the Data</h2>
+            <p>Scroll to reveal insights from our comprehensive car dataset.</p>
+        </div>
+    </section>
+    <section id="charts">
+        <div class="glass-panel">
+            <h2>Performance Charts</h2>
+            <canvas id="barChart"></canvas>
+            <canvas id="radarChart"></canvas>
+            <canvas id="scatterChart"></canvas>
+            <canvas id="doughnutChart"></canvas>
+        </div>
+    </section>
+    <section id="table">
+        <div class="glass-panel">
+            <h2>Filterable Data Table</h2>
+            <input type="text" id="filter" placeholder="Filter by brand or model">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Year</th>
+                        <th>Horsepower</th>
+                        <th>Price</th>
+                        <th>Fuel Type</th>
+                        <th>MPG</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section id="cards">
+        <div class="glass-panel">
+            <h2>Car Stat Cards</h2>
+            <div id="cardContainer">
+            </div>
+        </div>
+    </section>
+    <div id="parallax">
+        <div class="layer layer1"></div>
+        <div class="layer layer2"></div>
+        <div class="layer layer3"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
